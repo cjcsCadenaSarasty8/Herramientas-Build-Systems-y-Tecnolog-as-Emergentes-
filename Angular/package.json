@@ -1,0 +1,19 @@
+{
+  "name": "tienda",
+  "version": "1.0.0",
+  "description": "examen next",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjcsCadenaSarasty8/Herramientas-Build-Systems-y-Tecnolog-as-Emergentes-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjcsCadenaSarasty8/Herramientas-Build-Systems-y-Tecnolog-as-Emergentes-/issues"
+  },
+  "homepage": "https://github.com/cjcsCadenaSarasty8/Herramientas-Build-Systems-y-Tecnolog-as-Emergentes-#readme"
+}
