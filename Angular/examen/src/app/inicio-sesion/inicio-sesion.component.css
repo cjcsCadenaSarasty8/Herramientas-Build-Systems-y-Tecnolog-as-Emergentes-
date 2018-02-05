@@ -1,0 +1,25 @@
+.Contenedor-InicioSesion{
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  top: 50%;
+  padding: 20px;
+  background: #EDEAEA;
+  border-radius: 5px;
+  text-align: center;
+}
+
+input{
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 100%;
+}
+input .ingresar{
+  padding: 5px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 4px;
+}
