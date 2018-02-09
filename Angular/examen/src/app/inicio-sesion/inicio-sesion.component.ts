@@ -12,4 +12,8 @@ export class InicioSesionComponent implements OnInit {
   ngOnInit() {
   }
 
+  Validar(){
+    alert("hola");
+  }
+
 }
