@@ -1,3 +1,42 @@
-<p>
-  catalogo works!
-</p>
+<div class="Fondo">
+    <div class="container">
+        <barra-navegacion></barra-navegacion>
+        <br>
+        <div class="card">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-9">
+                        <h1>Catálogo Productos</h1>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <form>
+                            <div class="form-group">
+                                <label for="subject" >¿Que estas buscando?</label>
+                                <input type="text" class="form-control" (keyup)="onKey($event)" id="Campo-busqueda" name="Campo-busqueda" placeholder="Busqueda">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <br>
+                <div class="row" >
+                    <div class="col-md-4" style="margin-top:20px"  *ngFor="let Articulo of ListaArticulos">
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" [src]="Articulo.urlImagen" [alt]="Articulo.nombre">
+                            <div class="card-body">
+                                <h4 class="card-title">{{Articulo.nombre}}</h4>
+                                <p class="card-text">
+                                    <strong>Precio: </strong>${{Articulo.precio}}<br>
+                                    <strong>Unidades Disponibles: </strong>{{Articulo.unidades}}<br>
+                                </p>
+                                <a href="/vermas" class="btn btn-primary">Ver Mas</a>
+                                <a href="#" class="btn btn-warning" style="color:white">Añadir</a>
+                                <input type="number" min="0" [max]="Articulo.unidades">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>

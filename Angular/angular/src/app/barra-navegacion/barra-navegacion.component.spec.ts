@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { BarraInicioComponent } from './barra-inicio.component';
+import { ba, barranavegacionComponent } from './barra-navegacion.component';
 
-describe('BarraInicioComponent', () => {
-  let component: BarraInicioComponent;
-  let fixture: ComponentFixture<BarraInicioComponent>;
+describe('barranavegacionComponent', () => {
+  let component: barranavegacionComponent;
+  let fixture: ComponentFixture<barranavegacionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BarraInicioComponent ]
+      declarations: [ barranavegacionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BarraInicioComponent);
+    fixture = TestBed.createComponent(barranavegacionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

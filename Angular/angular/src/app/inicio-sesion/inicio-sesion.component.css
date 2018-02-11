@@ -1,0 +1,38 @@
+.Fondo{
+    background-image:url('../recursos/imagen/login-fondo.jpg');
+    background-size: 100% 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .Contenedor-InicioSesion{
+    position: fixed;
+    display: block;
+    width: 400px;
+    left: 40%;
+    top: 35%;
+    padding: 20px;
+    border-radius: 2px;
+  }
+  
+  input{
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 5px;
+  }
+  
+  input .ingresar{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 1px;
+  }
+  
+  label{
+    color: white;
+    text-shadow: 1px black;
+  }
+  
