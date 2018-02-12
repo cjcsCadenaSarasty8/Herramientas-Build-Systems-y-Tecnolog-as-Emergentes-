@@ -9,23 +9,22 @@ import {Articulo,Articulos} from '../modelos/Articulo';
 })
 export class CatalogoComponent implements OnInit {
 
-  prueba=Articulos;
-  ListaArticulos=this.prueba;
+  ListaArticulos=Articulos;
 
-  // onKey(event: KeyboardEvent) { // with type info
-  //   var parametro= (<HTMLInputElement>event.target).value;
-  //   if(parametro!=""){
-  //   this.ListaArticulos=Articulos.filter((elemento)=>elemento.nombre.indexOf(parametro)!=-1);
-  //   }else{
-  //     this.ListaArticulos=Articulos;
-  //   }
-  // }
+  onKey(event: KeyboardEvent) { // with type info
+    var parametro= (<HTMLInputElement>event.target).value;
+    if(parametro!=""){
+    this.ListaArticulos=Articulos.filter((elemento)=>elemento.nombre.indexOf(parametro)!=-1);
+    }else{
+      this.ListaArticulos=Articulos;
+    }
+  }
   
   
   constructor() {}
 
   ngOnInit() {
-    //this.getArticulos();
+    
   }
   
 }

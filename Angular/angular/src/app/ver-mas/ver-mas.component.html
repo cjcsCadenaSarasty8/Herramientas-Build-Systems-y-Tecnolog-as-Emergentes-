@@ -1,3 +1,24 @@
-<p>
-  ver-mas works!
-</p>
+<div class="Fondo">
+  <div class="container">
+      <barra-navegacion></barra-navegacion>
+      <br>
+      <div class="card" ng-if="Articulo">
+          <div class="container">
+              <h1>{{ArticuloDetalles.nombre}}</h1>
+              <hr>
+              <div class="row">
+                  <div class="col sm-6">
+                      <img width="100%" height="auto" [src]="ArticuloDetalles.urlImagen">
+                  </div>
+                  <div class="col sm-6">
+                  <h3><strong>Precio: </strong>${{ArticuloDetalles.precio}}</h3>    
+                  <h4><strong>Unidades Disponibles: </strong>{{ArticuloDetalles.unidades}}</h4>    
+                  </div>
+              </div>
+              <br>
+              <a class="btn btn-light" href="/catalogo" >Atras</a>
+              <br>
+          </div>
+      </div>
+  </div>
+</div>

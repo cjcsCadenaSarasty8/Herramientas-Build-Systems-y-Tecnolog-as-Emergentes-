@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import {Articulo,Articulos} from '../modelos/Articulo';
 
 @Component({
   selector: 'app-ver-mas',
@@ -6,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ver-mas.component.css']
 })
 export class VerMasComponent implements OnInit {
-
-  constructor() { }
-
+  
+  constructor(private route: ActivatedRoute) { }
+  
+  id: number;
+  articulo= this.route.params.subscribe(params => {
+    this.id = +params['id'];
+ });
+  ArticuloDetalles=Articulos.find((elemento)=>elemento.id==this.id);
   ngOnInit() {
-    alert(params.get('id'));
+   
+  
   }
-
+  
 }
