@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Articulo,Articulos} from '../modelos/Articulo';
+//import {DatosArticuloService} from '../datos-articulo.service'
 
 @Component({
   selector: 'app-catalogo',
@@ -8,24 +9,23 @@ import {Articulo,Articulos} from '../modelos/Articulo';
 })
 export class CatalogoComponent implements OnInit {
 
-  ListaArticulos:any=Articulos;
-  onKey(event: KeyboardEvent) { // with type info
-    var parametro= (<HTMLInputElement>event.target).value;
-    if(parametro!=""){
-    this.ListaArticulos=Articulos.filter((elemento)=>elemento.nombre.indexOf(parametro)!=-1);
-    }else{
-      this.ListaArticulos=Articulos;
-    }
-  }
-  //ListaArticulos=this.prueba;  
+  prueba=Articulos;
+  ListaArticulos=this.prueba;
+
+  // onKey(event: KeyboardEvent) { // with type info
+  //   var parametro= (<HTMLInputElement>event.target).value;
+  //   if(parametro!=""){
+  //   this.ListaArticulos=Articulos.filter((elemento)=>elemento.nombre.indexOf(parametro)!=-1);
+  //   }else{
+  //     this.ListaArticulos=Articulos;
+  //   }
+  // }
   
   
-  constructor() {
-    
-   }
+  constructor() {}
 
   ngOnInit() {
-    
+    //this.getArticulos();
   }
   
 }

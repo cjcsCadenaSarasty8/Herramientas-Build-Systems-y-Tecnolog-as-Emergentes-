@@ -10,6 +10,7 @@ export class VerMasComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    alert(params.get('id'));
   }
 
 }

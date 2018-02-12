@@ -39,7 +39,7 @@ import { CarroComprasComponent } from './carro-compras/carro-compras.component';
         component:CarroComprasComponent
       },
       {
-        path:'vermas',
+        path:'vermas/:id',
         component:VerMasComponent
       }
     ]),

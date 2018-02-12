@@ -4,7 +4,10 @@ export class Articulo {
     nombre: string;
     precio: number;
     unidades: number;
+
   }
+
+  
   
 export const Articulos:Articulo[] =[
 
