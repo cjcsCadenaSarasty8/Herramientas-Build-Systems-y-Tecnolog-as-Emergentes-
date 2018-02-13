@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Articulo,Articulos} from '../modelos/Articulo';
+import {Articulo,Articulos,ArticulosCarro} from '../modelos/Articulo';
+import { forEach } from '@angular/router/src/utils/collection';
 //import {DatosArticuloService} from '../datos-articulo.service'
 
 @Component({
@@ -19,11 +20,21 @@ export class CatalogoComponent implements OnInit {
       this.ListaArticulos=Articulos;
     }
   }
-  
-  
-  constructor() {}
 
+  AgregarArticulo(Articulo:Articulo){
+    alert(Articulo.nombre);
+    ArticulosCarro.push(Articulo);
+  }
+  constructor() {}
+  texto=[];
   ngOnInit() {
+
+    function autocompletar(){
+      
+      for(let Articulo of Articulos ){
+        this.texto.push(Articulo.nombre);
+      }
+    }
     
   }
   

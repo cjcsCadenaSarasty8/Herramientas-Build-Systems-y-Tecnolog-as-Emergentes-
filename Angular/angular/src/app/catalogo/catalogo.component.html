@@ -12,7 +12,7 @@
                         <form>
                             <div class="form-group">
                                 <label for="subject" >¿Que estas buscando?</label>
-                                <input type="text" class="form-control" (keyup)="onKey($event)" id="Campo-busqueda" name="Campo-busqueda" placeholder="Busqueda">
+                                <input type="text" class="form-control" [autocomplete]="texto" (keyup)="onKey($event)" id="Campo-busqueda" name="Campo-busqueda" placeholder="Busqueda">
                             </div>
                         </form>
                     </div>
@@ -29,8 +29,8 @@
                                     <strong>Unidades Disponibles: </strong>{{Articulo.unidades}}<br>
                                 </p>
                                 <a [routerLink]="['/vermas',Articulo.id]" class="btn btn-primary">Ver Mas</a>
-                                <a href="#" class="btn btn-warning" style="color:white">Añadir</a>
-                                <input type="number" min="0" [max]="Articulo.unidades">
+                                <button (click)="AgregarArticulo(Articulo)" type="button" class="btn btn-warning" style="color:white">Añadir</button>
+                                <input type="number" class="form-control" min="0" [max]="Articulo.unidades">
                             </div>
                         </div>
                     </div>
