@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Articulo } from 'app/modelos/Articulo';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'inicio-sesion',
@@ -9,14 +10,16 @@ import { Articulo } from 'app/modelos/Articulo';
 export class InicioSesionComponent implements OnInit {
 
   
-  constructor() { }
-
+  constructor(private dataService :DataService) { }
   ngOnInit() {
+    this.dataService.ObtenerUsuarios();
+    
   }
   Validar(emailIngresado:string, contrasenaIngresado:string){
-    let emailConsulta="cjcs@dominio.com";
-    let contrasenaConsulta="123456";
-    if(emailIngresado==emailConsulta && contrasenaIngresado==contrasenaConsulta){
+    let Usuario= this.dataService.Usuarios.filter((Registro)=>Registro.usuario==emailIngresado)[0];
+    if(emailIngresado==Usuario["usuario"] && contrasenaIngresado==Usuario["contrasena"]){
+      //alert(this.dataService.retorno['contrasena']);
+      this.dataService.IdUsuario=Usuario["id"];
       window.location.href="/catalogo";
     }else{
       alert("Usuario o Contraseña incorrecta");

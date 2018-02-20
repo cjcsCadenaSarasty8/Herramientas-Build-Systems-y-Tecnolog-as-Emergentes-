@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'ver-mas',
   templateUrl: './ver-mas.component.html',

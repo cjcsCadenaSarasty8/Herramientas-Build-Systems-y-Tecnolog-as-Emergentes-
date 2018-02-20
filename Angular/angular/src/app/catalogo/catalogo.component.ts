@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Articulo,Articulos,ArticulosCarro} from '../modelos/Articulo';
 import { forEach } from '@angular/router/src/utils/collection';
+import { DataService } from 'app/data.service';
 //import {DatosArticuloService} from '../datos-articulo.service'
 
 @Component({
@@ -25,17 +26,11 @@ export class CatalogoComponent implements OnInit {
     alert(Articulo.nombre);
     ArticulosCarro.push(Articulo);
   }
-  constructor() {}
-  texto=[];
+   
+  constructor(private dataService:DataService) {}
   ngOnInit() {
 
-    function autocompletar(){
-      
-      for(let Articulo of Articulos ){
-        this.texto.push(Articulo.nombre);
-      }
-    }
-    
+    this.dataService.ObtenerProductos(); 
   }
   
 }

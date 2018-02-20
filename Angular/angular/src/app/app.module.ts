@@ -11,6 +11,9 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { VerMasComponent } from './ver-mas/ver-mas.component';
 import { CarroComprasComponent } from './carro-compras/carro-compras.component';
 
+import {HttpService} from './http.service';
+import { DataService } from './data.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +50,7 @@ import { CarroComprasComponent } from './carro-compras/carro-compras.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

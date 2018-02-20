@@ -6,16 +6,14 @@
         <div class="form-group">
           <label for="subject">Correo Electrónico:</label>
           <br>
-          <input type="email" class="form-control" required
-            >
+          <input #email type="email" class="form-control" required>
         </div>
         <div class="form-group">
           <label for="subject">Contraseña:</label>
           <br>
-          <input type="text" class="form-control" required
-            >
+          <input #contrasena type="password" class="form-control" required>
         </div>
-        <input class="ingresar btn btn-success" type="submit" title="Ingresar" (click)="Validar()">
+        <input class="ingresar btn btn-success" type="submit" title="Ingresar" (click)="Validar(email.value, contrasena.value)">
       </form>
     </div>
   </div>
