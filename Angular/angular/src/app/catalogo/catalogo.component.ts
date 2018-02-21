@@ -23,14 +23,14 @@ export class CatalogoComponent implements OnInit {
   }
 
   AgregarArticulo(Articulo:Articulo){
-    alert(Articulo.nombre);
-    ArticulosCarro.push(Articulo);
+    // alert(Articulo.nombre);
+    // ArticulosCarro.push(Articulo);
   }
    
   constructor(private dataService:DataService) {}
   ngOnInit() {
 
-    this.dataService.ObtenerProductos(); 
+   console.log(window.localStorage.getItem('id'));
   }
   
 }

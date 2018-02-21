@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 
+
 @Component({
   selector: 'barra-navegacion',
   templateUrl: './barra-navegacion.component.html',
@@ -9,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 export class barranavegacionComponent implements OnInit {
 
   
-  constructor() { }
+  constructor() {
+    if(window.localStorage.getItem('id')==""){
+      window.location.href="/";    
+    }
+   }
 
-  ngOnInit() {
+  cerrarSesion(){
+    window.localStorage.setItem('id','');
+    window.location.href="/";    
   }
 
+  ngOnInit() {
+   
+  }
 }
