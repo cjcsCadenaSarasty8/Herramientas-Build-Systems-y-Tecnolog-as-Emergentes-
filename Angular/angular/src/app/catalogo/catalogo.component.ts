@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Articulo,Articulos,ArticulosCarro} from '../modelos/Articulo';
-import { forEach } from '@angular/router/src/utils/collection';
+import {Articulo} from '../modelos/Articulo';
 import { DataService } from 'app/data.service';
 //import {DatosArticuloService} from '../datos-articulo.service'
 
@@ -11,14 +10,14 @@ import { DataService } from 'app/data.service';
 })
 export class CatalogoComponent implements OnInit {
 
-  ListaArticulos=Articulos;
+  ListaArticulos=this.dataService.Articulos;
 
-  onKey(event: KeyboardEvent) { // with type info
+  onKey(event: KeyboardEvent) {
     var parametro= (<HTMLInputElement>event.target).value;
     if(parametro!=""){
-    this.ListaArticulos=Articulos.filter((elemento)=>elemento.nombre.indexOf(parametro)!=-1);
+    this.ListaArticulos=this.dataService.Articulos.filter((elemento)=>elemento.nombre.indexOf(parametro)!=-1);
     }else{
-      this.ListaArticulos=Articulos;
+      this.ListaArticulos=this.dataService.Articulos;
     }
   }
 
@@ -27,8 +26,12 @@ export class CatalogoComponent implements OnInit {
     // ArticulosCarro.push(Articulo);
   }
    
-  constructor(private dataService:DataService) {}
+  constructor(private dataService :DataService) {
+    this.dataService.ObtenerArticulos;
+  }
   ngOnInit() {
+    
+    this.ListaArticulos=this.dataService.Articulos;
 
    console.log(window.localStorage.getItem('id'));
   }
