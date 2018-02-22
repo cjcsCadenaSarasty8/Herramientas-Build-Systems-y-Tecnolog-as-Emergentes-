@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {Articulo,Articulos} from '../modelos/Articulo';
+import {Articulo} from '../modelos/Articulo';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-ver-mas',
@@ -9,13 +10,13 @@ import {Articulo,Articulos} from '../modelos/Articulo';
 })
 export class VerMasComponent implements OnInit {
   
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,private dataService:DataService) { }
   
   id: number;
   articulo= this.route.params.subscribe(params => {
     this.id = +params['id'];
  });
-  ArticuloDetalles=Articulos.find((elemento)=>elemento.id==this.id);
+  ArticuloDetalles=this.dataService.Articulos.find((elemento)=>elemento.id==this.id);
   ngOnInit() {
    
   
