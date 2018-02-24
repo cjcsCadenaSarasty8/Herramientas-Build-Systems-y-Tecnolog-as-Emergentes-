@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class barranavegacionComponent implements OnInit {
 
+  ConteoArticulos=window.sessionStorage.getItem('ConteoCarrito');
   
   constructor() {
     if(window.localStorage.getItem('id')==""){

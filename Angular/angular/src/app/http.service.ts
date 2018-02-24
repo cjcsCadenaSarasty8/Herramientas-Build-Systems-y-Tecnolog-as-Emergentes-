@@ -24,4 +24,9 @@ export class HttpService {
     return this.http.get('https://angularcarlos-6b6a8.firebaseio.com/articulo/.json')
     .map((response:Response)=>response.json())
   }
+
+  ObtenerCarroCompras(){
+    return this.http.get('https://angularcarlos-6b6a8.firebaseio.com/CarroCompras/.json')
+    .map((response:Response)=>response.json())
+  }
 }

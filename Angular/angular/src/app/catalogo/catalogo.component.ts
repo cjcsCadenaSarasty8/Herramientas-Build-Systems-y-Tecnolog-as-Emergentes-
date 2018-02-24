@@ -30,7 +30,7 @@ export class CatalogoComponent implements OnInit {
     this.dataService.ObtenerArticulos;
   }
   ngOnInit() {
-    
+    this.dataService.ObtenerArticulos();
     this.ListaArticulos=this.dataService.Articulos;
 
    console.log(window.localStorage.getItem('id'));

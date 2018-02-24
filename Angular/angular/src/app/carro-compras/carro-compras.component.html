@@ -2,29 +2,32 @@
   <div class="container">
       <barra-navegacion></barra-navegacion>
       <br>
-      <div class="card" ng-if="Articulo">
+      <div class="card" >
+      <!-- <div class="card" *ngIf="CarroCompras.length>0"> -->
           <div class="container">
               <h1>Carrito Compras</h1>
               <hr>
               <br>
               <div class="row">
                 <div class="col-md-6">
-                  <ul class="list-group">
+                  <ul class="list-group" *ngFor="let Articulo of CarroCompras">
                     <li class="list-group-item">
-                      <img src="../recursos/imagen/ajo.jpg" class="rounded float:left" width="100px" height="auto">
-                        Articulo<br>
-                        <strong>Unidades</strong><br>
-                        <strong>Subtotal</strong><br>
+                      <img  [src]="Articulo.urlImagen" class="rounded float:left" width="100px" height="auto">
+                      {{Articulo.nombre}} <br>
+                        <strong>Unidades: </strong>{{Articulo.Cantidad}} <br>
+                        <strong>Subtotal: </strong>{{Articulo.Subtotal}}<br>
                     </li>
                   </ul>
                 </div>
                 <div class="col-md-6">
-                  <h1><strong>Total:</strong>$</h1>
+                  <h1><strong>Total:</strong>$ {{Total}} </h1>
                   <button type="button" class="btn btn-light">Cancelar</button>
                   <button type="button" class="btn btn-light">Pagar</button>
                 </div>
               </div>
           </div>
+          <br>
       </div>
+      <br>
   </div>
 </div>

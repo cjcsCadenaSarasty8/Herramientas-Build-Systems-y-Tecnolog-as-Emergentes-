@@ -4,10 +4,10 @@ export class CarroCompras {
   idProducto : number;
   idUsuario : number;
   Cantidad : number;
-    constructor(id : number, idProducto : number, idUsuario : number, Cantidad : number){
-      this.id =id;
-      this.idProducto = idProducto;
-      this.idUsuario = idUsuario;
-      this.Cantidad = Cantidad;
+    constructor(){
+      this.id =0;
+      this.idProducto = 0;
+      this.idUsuario = 0;
+      this.Cantidad = 0;
     }
   }

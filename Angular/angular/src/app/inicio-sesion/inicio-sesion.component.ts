@@ -22,6 +22,8 @@ export class InicioSesionComponent implements OnInit {
       if(emailIngresado==Usuario["usuario"] && contrasenaIngresado==Usuario["contrasena"]){
         DataService.IdUsuario=Usuario["id"];
         window.localStorage.setItem('id',Usuario["id"].toString());
+        this.dataService.ObtenerArticulos();
+        this.dataService.ObtenerCarroCompras();
         window.location.href="/catalogo";
       }else{
         alert("Usuario o Contraseña incorrecta");
