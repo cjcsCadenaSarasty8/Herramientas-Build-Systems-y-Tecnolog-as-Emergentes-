@@ -1,5 +1,6 @@
 .Fondo{
-  background-image: url('./recursos/login-fondo.jpg');
+  /* background-image: url('../recursos/login-fondo.jpg'); */
+  background-image: url('../../recursos/imagen/login-fondo.jpg');
     background-size: 100% 100%;
     position: absolute;
     width: 100%;
@@ -7,6 +8,7 @@
   }
   
   .Contenedor-InicioSesion{
+    background-color: #ffffff;
     position: fixed;
     display: block;
     width: 400px;
@@ -16,7 +18,7 @@
     border-radius: 2px;
   }
   
-  input{
+  Button{
     border-radius: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -32,7 +34,5 @@
   }
   
   label{
-    color: white;
-    text-shadow: 1px black;
+    color: black;
   }
-  

@@ -1,33 +1,34 @@
 import React, { Component } from 'react';
 
+import { InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
+import { Button } from 'reactstrap';
+
 import './login.css';
-
-//import Imagen from './recursos/imagen/login-fondo.jpg'
-
 
 class login extends Component {
     render() {
       return (
         <div className="Fondo">
-            <div className="container">
-            
-                <div className="Contenedor-InicioSesion">
-                    <form>
-                        <div className="form-group">
-                            <label for="subject">Correo Electrónico:</label>
-                            <br/>
-                            <input name="email" type="email" class="form-control" required/>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Contraseña:</label>
-                            <br/>
-                            <input name="contrasena" type="password" class="form-control" required/>
-                        </div>
-                        <input class="ingresar btn btn-success" type="submit" title="Ingresar"/>
-                    </form>
+            <div class="container">
+    
+                <div class="Contenedor-InicioSesion">
+                    <br/>
+                    <label for="subject">Correo Electronico:</label>
+                    <br/>
+                    <InputGroup>
+                        <Input name="Correo" placeholder="Correo Electronico" />
+                    </InputGroup>
+                    <br/>
+                    <label for="subject">Contraseña:</label>
+                    <br/>
+                    <InputGroup>
+                        <Input placeholder="Contraseña" type="password" />
+                    </InputGroup>
+                    <br/>
+                    <Button color="success" class="ingresar btn btn-success" type="submit">Ingresar</Button >
                 </div>
             </div>
-        </div>
+      </div>
   
       );
     }

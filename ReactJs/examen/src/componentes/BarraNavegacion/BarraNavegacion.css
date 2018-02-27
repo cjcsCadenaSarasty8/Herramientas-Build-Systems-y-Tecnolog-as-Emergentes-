@@ -1,0 +1,37 @@
+Navbar{
+  background-color: white;
+}
+.contenedor{
+  width: 100%;
+  height: 3cm;
+  background-color: #7ff0f0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: arial,helvetica;
+}
+
+.logo-contenedor{
+  width: 10%;
+  height: 3px;
+}
+
+.logo-container h2{
+  color: #696969;
+}
+
+.menu{
+  width: 40%;
+}
+
+.menu ul{
+  display: none;
+  flex-grow: row nowrap;
+  justify-content: space-around;
+}
+
+.menu ul li{
+  color:#696969;
+  font-size: 1.3cm;
+}
