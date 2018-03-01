@@ -1,0 +1,8 @@
+.Fondo{
+    /* background-image: url('../recursos/login-fondo.jpg'); */
+    background-image: url('../../recursos/imagen/error404.jpg');
+      background-size: 100% 100%;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }

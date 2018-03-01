@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
+import { InputGroup,  Input } from 'reactstrap';
 import { Button } from 'reactstrap';
 
 import './login.css';
