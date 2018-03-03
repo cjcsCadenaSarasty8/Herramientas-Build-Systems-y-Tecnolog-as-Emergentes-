@@ -40,35 +40,29 @@ class Barranavegacion extends Component {
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                     <NavItem>
-                    <NavLink href="/components/">Components</NavLink>
+                    <NavLink href="/components/"><img width="20px" height="20px" src={require("../../recursos/iconos/002-show-apps-button.svg")}/></NavLink>
                     </NavItem>
                     <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+                    <NavLink href="https://github.com/reactstrap/reactstrap"><img width="20px" height="20px" src={require("../../recursos/iconos/004-commerce.svg")}/><span class="badge badge-danger badge-pill"></span></NavLink>
                     </NavItem>
-                    <UncontrolledDropdown nav inNavbar>
-                    <DropdownToggle nav caret>
-                    Options
-                    </DropdownToggle>
-                    <DropdownMenu >
-                    <DropdownItem>
-                    Option 1
-                    </DropdownItem>
-                    <DropdownItem>
-                    Option 2
-                    </DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>
-                    Reset
-                    </DropdownItem>
-                    </DropdownMenu>
-                    </UncontrolledDropdown>
+                    <NavItem>
+                    <NavLink href="https://github.com/reactstrap/reactstrap"><img width="20px" height="20px" src={require("../../recursos/iconos/001-inbox.svg")}/><span class="badge badge-danger badge-pill"></span></NavLink>
+                    </NavItem>
+                    <NavItem>
+                    <NavLink onClick={this.CerrarSesion} ><img width="20px" height="20px" src={require("../../recursos/iconos/003-logout.svg")}/></NavLink>
+                    </NavItem>
                     </Nav>
                 </Collapse>
             </Navbar>
         </div>
       );
     }
+  
+  CerrarSesion(){
+    window.localStorage.setItem("idUsuario","0");
+    window.location.pathname="/login";
   }
+}
   
   export default Barranavegacion;
   
