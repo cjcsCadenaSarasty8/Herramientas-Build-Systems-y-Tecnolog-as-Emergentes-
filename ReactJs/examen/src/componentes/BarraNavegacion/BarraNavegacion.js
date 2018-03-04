@@ -6,11 +6,8 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    NavLink
+     } from 'reactstrap';
 import './BarraNavegacion.css';
 
 
@@ -35,18 +32,18 @@ class Barranavegacion extends Component {
       return (
         <div >
             <Navbar color="light" light expand="xs" >
-                <NavbarBrand href="/">La bodega</NavbarBrand>
+                <NavbarBrand href="/catalogo">La bodega</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>
                     <NavItem>
-                    <NavLink href="/components/"><img width="20px" height="20px" src={require("../../recursos/iconos/002-show-apps-button.svg")}/></NavLink>
+                    <NavLink href="/catalogo"><img width="20px" height="20px" src={require("../../recursos/iconos/002-show-apps-button.svg")}/></NavLink>
                     </NavItem>
                     <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap"><img width="20px" height="20px" src={require("../../recursos/iconos/004-commerce.svg")}/><span class="badge badge-danger badge-pill"></span></NavLink>
+                    <NavLink href="#"><img width="20px" height="20px" src={require("../../recursos/iconos/004-commerce.svg")}/><span class="badge badge-danger badge-pill"></span></NavLink>
                     </NavItem>
                     <NavItem>
-                    <NavLink href="https://github.com/reactstrap/reactstrap"><img width="20px" height="20px" src={require("../../recursos/iconos/001-inbox.svg")}/><span class="badge badge-danger badge-pill"></span></NavLink>
+                    <NavLink href="#"><img width="20px" height="20px" src={require("../../recursos/iconos/001-inbox.svg")}/></NavLink>
                     </NavItem>
                     <NavItem>
                     <NavLink onClick={this.CerrarSesion} ><img width="20px" height="20px" src={require("../../recursos/iconos/003-logout.svg")}/></NavLink>
@@ -65,4 +62,3 @@ class Barranavegacion extends Component {
 }
   
   export default Barranavegacion;
-  

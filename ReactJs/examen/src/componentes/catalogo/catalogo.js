@@ -4,8 +4,6 @@ import { Container, Row, Col } from 'reactstrap';
 import { Card, CardImg, CardText, CardBody, CardTitle, Button } from 'reactstrap';
 import { InputGroup, Input } from 'reactstrap';
 import './catalogo.css';
-import Articulo from './Articulo';
-
 
 class catalogo extends Component {
 
@@ -15,6 +13,7 @@ class catalogo extends Component {
 
     componentDidMount(){
         this.CargarArticulos();
+        
     }
  
     render() {
@@ -94,7 +93,7 @@ class catalogo extends Component {
                         <strong>Precio: </strong>${Articulo.precio}<br/>
                         <strong>Unidades Disponibles: </strong>{Articulo.unidades}<br/>
                         </CardText>
-                        <Button color="primary">Ver Mas</Button>
+                        <Button name={Articulo.id} onClick={this.Vermas.bind(Articulo)} color="primary" href >Ver Mas</Button>
                         <Button color="warning">Añadir</Button>
                     </CardBody>
                 </Card>
@@ -103,6 +102,10 @@ class catalogo extends Component {
             </Row>
         </div>
         ReactDOM.render(contenido, document.getElementById('contenido'));
+    }
+    Vermas(articulo){
+        window.localStorage.setItem("idVermas",articulo.target.name);
+        window.location.href="/vermas";
     }
     
   }

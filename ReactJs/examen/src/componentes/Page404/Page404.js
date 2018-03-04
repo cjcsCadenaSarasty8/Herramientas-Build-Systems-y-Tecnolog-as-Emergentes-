@@ -6,7 +6,7 @@ class Page404 extends Component {
     render() {
       return (
         <div className="Fondo">
-          
+          pagina no encontrada
         </div>
       );
     }

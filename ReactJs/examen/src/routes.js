@@ -7,6 +7,7 @@ import { Route, Switch} from 'react-router-dom';
 import App from './App';
 import Login from './componentes/login/login';
 import Catalogo from './componentes/catalogo/catalogo';
+import VerMas from './componentes/VerMas/VerMas';
 import Page404 from './componentes/Page404/Page404';
 
 const AppRoutes = () =>
@@ -15,6 +16,7 @@ const AppRoutes = () =>
         <Route exact path="/" component={Login}/>
         <Route exact path="/login" component={Login}/>
         <Route exact path="/catalogo" component={Catalogo}/>
+        <Route exact path="/vermas" component={VerMas}/>
         <Route  component={Page404}/>
     </Switch>
 </App>;
